@@ -23,6 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2an(hnu0-bralf2zep0h8-s%6x!4b%228gy2@l3*@a%b85y$@m'
 
 CELERY_BROKER_URL = 'pyamqp://guest@localhost//'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_BACKEND = 'rpc://'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
