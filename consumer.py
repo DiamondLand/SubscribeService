@@ -4,7 +4,7 @@ import pika
 
 from loguru import logger
 
-API_URL = "http://localhost:8000/api/data/"  #! URL Django API
+API_URL = "http://localhost:8000/api/data/"
 
 def process_message(ch, method, properties, body):
     message = json.loads(body)
